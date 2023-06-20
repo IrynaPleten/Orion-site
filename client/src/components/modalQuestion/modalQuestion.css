@@ -1,0 +1,130 @@
+.window-question {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+	background: rgba(13, 13, 13, 0.48);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	opacity: 0;
+	pointer-events: none;
+	transition: 0.5s;
+}
+.window-question.active {
+	opacity: 1;
+	pointer-events: all;
+}
+.window-content {
+	width: 1000px;
+	height: 659px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--white);
+	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.1);
+	border-radius: 30px;
+	transform: scale(0.5);
+	transition: 0.4s all;
+}
+.window-content.active {
+	transform: scale(1);
+}
+.window-content h1 {
+	text-align: center;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 108.34%;
+	color: #1A1433;
+}
+.window-content p {
+	margin-top: 21px;
+	width: 627px;
+	height: 41px;	
+	text-align: center;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	color: var(--black);
+}
+.wrap-text {
+	margin-top: 39px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 22px;
+}
+.input-name,
+.input-number,
+.textarea {
+	cursor: pointer;
+}
+.input-name:hover,
+.input-number:hover,
+.textarea:hover {
+	border-color: #9650F0;
+	transition: 0.5s;
+}
+.input-name {
+	width: 580px;
+	height: 64px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background: var(--white);
+	border: 1px solid var(--white);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+	border-radius: 40px;
+}
+.input-number {
+	width: 580px;
+	height: 64px;
+	padding-left: 40px;
+	padding-right: 40px;
+	
+	background: var(--white);
+	border: 1px solid #E0E0E0;
+	border-radius: 40px;
+}
+.textarea {
+	align-self: center;
+	resize: none;
+	padding-top: 25px;
+	padding-left: 40px;
+	padding-right: 40px;
+	background: var(--white);
+	border: 1px solid #E0E0E0;
+	border-radius: 20px;
+}
+.submit-question {
+	width: 280px;
+	height: 64px;
+	align-self: flex-end;
+	text-align: center;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	color: var(--white);
+
+	background: linear-gradient(85.13deg, #3831D1 5.62%, #9650F0 108.06%);
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+	border-radius: 36px;
+}
+.submit-question:hover {
+	transform: scale(1.2);
+	transition: 0.5s;
+}
+.window-question-close {
+	width: 35px;
+	height: 35px;
+
+	position: absolute;
+	margin-right: 19px;
+	margin-top: -60%;
+	align-self: flex-end;
+	background: none;
+	background-image: url('../../img/close.svg');
+}

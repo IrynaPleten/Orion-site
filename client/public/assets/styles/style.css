@@ -1,0 +1,26 @@
+:root {
+	--white:  #FFFFFF;
+	--black:  #000000;
+	
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Lato', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+ul, ol {
+	list-style: none;
+}
+button,
+input {
+	border: none;
+}
+button {
+	cursor: pointer;
+}

@@ -1,0 +1,500 @@
+.nearestCourse {
+	display: flex;
+	justify-content: center;
+	gap: 192px;
+	align-items: baseline;
+}
+.onlineStatus{
+	width: 129px;
+	height: 35px;
+	background: linear-gradient(74.44deg, #3331D1 -25.27%, #933FEE 82.39%);
+	display: flex;
+	align-items: center;
+	padding-left: 12px;
+}
+
+.onlineStatusText{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+
+.courseInformation{
+	margin-top: 45px;
+}
+
+.aboutThisCourse{
+ margin-top: 47px;
+}
+
+.courseAuthor{
+	width: 211px;
+	height: 24px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.thisCourseName{
+	width: 514px;
+	height: 54px;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 108.34%;
+	color: #1A1433;
+	margin-top: 30px;
+}
+
+.thisCorsesDescription{
+	width: 463px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	color: #000000;
+	margin-top: 30px;
+}
+
+.coursesTimeAndCost{
+	position: relative;
+	width: 480px;
+	height: 75px;
+	border: 1px solid #B8B8B8;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 40px;
+	padding-left: 47px;
+	margin-top: 57px;
+	background: transparent;
+}
+
+.timeOfThisCourse,
+.coursePaymentPerMonth
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
+
+.courseTimeText,
+.coursePaymentText
+{
+	height: 30px;
+}
+
+.courseTimeName,
+.coursePaymentPerMonthTitle
+{
+	width: 48px;
+	height: 19px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 143.9%;
+	color: #000000;
+	margin: 0px;
+}
+
+.courseTimetable,
+.coursePaymentPerMonthOpportunities
+{
+	width: 150px;
+	height: 22px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #000000;
+	margin: 0px;
+
+}
+
+.courseTimeImg{
+	width: 30px;
+	height: 30px;
+}
+
+.nearestCourseGroup{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 149px;
+}
+.thisCourseBox{
+	width: 515px;
+	height: 439px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.12);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	z-index: 100;
+}
+
+.nearestCoursesGroupInformation{
+	width: 466px;
+	height: 262px;
+	background: linear-gradient(65.01deg, #2221B7 -22.24%, #FC8383 110.74%);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.courseStartAtAndCost, .durationAndNumberOfLessons{
+	display: flex;
+	flex-direction: row;
+}
+
+.courseStartAtAndCost{
+	gap: 120px;
+	margin-bottom: 15.63px;
+}
+
+.durationAndNumberOfLessons{
+	gap: 93px;
+	margin-top: 15px;
+}
+
+.courseStartAt,
+.thisCourseCost,
+.duration,
+.courseNumberOfLessons{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.thisCourseBoxTitle{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 143.9%;
+	color: #000000;
+	
+}
+
+.courseStartAtTitle, 
+.thisCourseCostTitle,
+.durationTitle, 
+.courseNumberOfLessonsTitle
+{
+	margin: 0px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143.9%;
+	color:#FFFFFF;
+}
+
+.courseStartAtText, 
+.thisCourseCostText,
+.durationText, 
+.courseNumberOfLessonsText{
+	margin: 0px;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 26px;
+	line-height: 143.9%;
+	color: #FFFFFF;
+}
+
+.courseDivider{
+	margin-left: 32px;
+	width: 424px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.thisCoursenumberOfFreePlaces{
+	width: 182px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 17.21px;
+	margin-top: 37.12px;
+}
+
+.freePlaces{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #FFFFFF;
+
+}
+
+.freePlacesIcon{
+	color: #FFFFFF;
+}
+
+.leaveReview{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #232323;
+}
+
+.startCourse{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+	width: 301px;
+	height: 70px;
+	left: 1237px;
+	top: 590px;
+	background: linear-gradient(58.91deg, #1C1A9D -12.05%, #DC78FF 108%);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 143.9%;
+	border: none;
+	color: #FFFFFF;
+
+}
+
+.leaveReviewOrStartCourse{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 41.5px;
+	margin-top: 18px;
+}
+
+.toMoreDetails{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 18.16px;
+	margin-top: 280px;
+}
+
+.toMoreDetailsText{
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #000000;
+	margin: 0px;
+}
+
+.toMoreDetailsIcon{
+	color: #3931D1;
+}
+
+.technologiesUnderStudy{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 63px;
+	margin-top: 168.16px;
+}
+
+.technologiesUnderStudyTitle{
+	font-style: normal;
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 108.34%;
+	color: #1A1433;
+}
+
+.technologiesUnderStudyBox{
+	max-width: 828px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 27px;
+}
+
+.technologiesUnderStudy_example{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 8px;
+}
+
+
+
+.technologiesUnderStudyText{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 100%;
+	color: #000000;
+}
+
+.aboutProfession{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	gap: 63px;
+	width: 792px;
+	/* margin-top: 142px; */
+	margin: 142px auto;
+}
+
+.aboutProfessionTitle{
+	font-style: normal;
+	font-weight: 800;
+	font-size: 30px;
+	line-height: 108.34%;
+	color: #1A1433;
+	margin: 0px;
+}
+
+.aboutProfessionText{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 185%;
+	color: #000000;
+	margin: 0px;
+}
+
+.aimOfCourseAndForWhom{
+	display: flex;
+	flex-direction: row;
+	width: 980px;
+	border: 1px solid #B8B8B8;
+	border-radius: 10px;
+	align-items: center;
+	justify-content: center;
+	margin: 54px auto; 
+}
+
+.aimOfCourse{
+	display: flex;
+	flex-direction: column;
+	gap: 44px;
+}
+
+
+
+.aimOfCorseTitle{
+	display: flex;
+	flex-direction: row;
+	gap: 11.87px;
+	align-items: center;
+}
+
+.aimOfCorseTitleIcon{
+	color: #3331D1;
+	font-size: large;
+}
+
+.aimOfCorseTitleText{
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 108.34%;
+	color: #1A1433;
+	margin: 0px;
+}
+
+.aimOfCourseList{
+	list-style: none;
+}
+
+
+.aimOfCourseList li{
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 149%;
+	color: #000000;
+}
+
+.aimOfCourseList li::before {
+  content: "• ";
+  color: #3331D1;
+	width: 10px;
+	height: 10px;
+}
+
+.courseForWhom{
+	display: flex;
+	flex-direction: column;
+	gap: 44px;
+}
+
+.courseForWhomTitle{
+	display: flex;
+	flex-direction: row;
+	gap: 11.87px;
+	align-items: center;
+}
+
+.courseForWhomTitleIcon{
+	color: #3331D1;
+	font-size: large;
+}
+
+.courseForWhomTitleText{
+	font-style: normal;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 108.34%;
+	color: #1A1433;
+	margin: 0px;
+}
+
+.courseForWhomText{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 149%;
+	color: #000000;
+}
+
+.courseForWhomButton{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	gap: 10px;
+	width: 291px;
+	height: 59px;
+	background: linear-gradient(58.91deg, #1C1A9D -12.05%, #DC78FF 108%);
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+	border: none;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 143.9%;
+	/* identical to box height, or 22px */
+
+
+	color: #FFFFFF;
+}

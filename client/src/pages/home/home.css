@@ -1,0 +1,77 @@
+/* 1920 × 1080 */
+* {
+	max-width: 1920px;
+	max-height: 1080px;
+}
+// slider
+.slider {
+	width: 100%;
+	height: 300px;
+}
+.poster {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 110px;
+}
+.titles {
+	width: 450px;
+	height: 150px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.photo {
+	width: 500px;
+	height: 400px;
+	padding-top: 70px;
+	position: relative;
+}
+
+.title {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+.titles h1 {
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 108.34%;
+	color: #1A1433;
+}
+.about {
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	color: var(--black);
+}
+.input {
+	display: flex;
+	align-items: center;
+	margin-top: 8px;
+}
+.numberPhone {
+	position: relative;
+	width: 480px;
+	height: 55px;
+	padding-left: 26px;
+	
+	background: var(--white);
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+	border-radius: 30px;
+}
+.phone-btn {
+	position: absolute;
+	margin-left: 255px;
+	width: 195px;
+	height: 55px;
+	background: linear-gradient(85.13deg, #3831D1 5.62%, #9650F0 108.06%);
+	border-radius: 36px;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	color: var(--white);
+}
+
+

@@ -1,0 +1,82 @@
+.footer {
+	width: 100%;
+	height: 460px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	background: #F7F5F5;
+}
+.footer hr {
+	width: 1180px;
+	border-style: 1px solid #DADADA;
+	margin-top: 190px;
+	flex-shrink: 0;
+}
+.footer-blocks {
+	display: flex;
+	justify-content: space-around;
+	gap: 200px;
+	margin-top: 70px;
+}
+.privacy {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.logo {
+	width: 100px;
+	height: 30px;
+}
+.about-privacy{
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143.9%;
+	color: var(--black);
+}
+.logo + .about-privacy {
+	margin-top: 45px;
+}
+.about-privacy + .about-privacy {
+	margin-top: 10px;
+}
+.motto {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: var(--black);
+}
+.footer-blocks p {
+	align-self: center;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: var(--black);
+	text-transform: uppercase;
+}
+.footer-contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.footer-contact a {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: var(--black);
+}
+.social-network {
+	display: flex;
+	gap: 25px;
+}
+.social-network img {
+	width: 30px;
+	height: 30px;
+}
+.social-network + .number {
+	margin-top: 30px;
+}
+.number + .email {
+	margin-top: 10px;
+}

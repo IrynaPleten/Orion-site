@@ -1,0 +1,277 @@
+html{
+	scroll-behavior: smooth;
+}
+
+.nearestCourse{
+	margin-top: 149px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	gap: 149px;
+}
+
+.aboutCourse{
+	/* margin-left: 370px; */
+	margin-top: 47px;
+}
+
+.author{
+	width: 211px;
+	height: 24px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.allCourses{
+	width: 514px;
+	height: 54px;
+	font-style: normal;
+	font-weight: 800;
+	font-size: 50px;
+	line-height: 108.34%;
+	color: #1A1433;
+	margin-top: 30px;
+}
+
+.corsesDescription{
+	width: 463px;
+	height: 50px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 22px;
+	color: #000000;
+	margin-top: 30px;
+}
+
+.coursesTimeCost{
+	position: relative;
+	width: 480px;
+	height: 75px;
+	border: 1px solid #B8B8B8;
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	gap: 40px;
+	padding-left: 47px;
+	margin-top: 57px;
+	background: transparent;
+}
+
+.timeOfCourse,
+.coursePayment
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12px;
+}
+
+.courseTimeText,
+.coursePaymentText
+{
+	height: 30px;
+}
+
+.courseTimeTitle,
+.coursePaymentTitle
+{
+	width: 48px;
+	height: 19px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 143.9%;
+	color: #000000;
+	margin: 0px;
+}
+
+.courseTimeTable,
+.coursePaymentOpportunities
+{
+	width: 150px;
+	height: 22px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #000000;
+	margin: 0px;
+
+}
+
+.courseTimeIcon{
+	width: 30px;
+	height: 30px;
+}
+
+.courseBox{
+	width: 515px;
+	height: 439px;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.12);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	z-index: 100;
+}
+
+.nearestCoursesInformation{
+	width: 466px;
+	height: 262px;
+	background: linear-gradient(65.01deg, #2221B7 -22.24%, #FC8383 110.74%);
+	border-radius: 10px;
+	padding-left: 32px;
+}
+
+.detailsOfNearestCourse{
+	display: flex;
+	flex-direction: row;
+	gap: 127px;
+}
+
+.courseBoxTitle{
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 143.9%;
+	color: #000000;
+	margin: 24px 166px 18px 167px;
+}
+
+.nearestCourseName,
+.nearestCoursesStatus
+{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 143.9%;
+	color:#FFFFFF;
+}
+
+.nearestCourseText,
+.nearestCourseDateOfStart{
+	font-style: normal;
+	font-weight: 800;
+	font-size: 26px;
+	line-height: 143.9%;
+	color: #FFFFFF;
+}
+
+.divider{
+	margin-left: 32px;
+	width: 424px;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.numberOfFreePlaces{
+	width: 182px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 17.21px;
+}
+
+.freePlaces{
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #FFFFFF;
+
+}
+
+.freePlacesIcon{
+	color: #FFFFFF;
+}
+
+.moreDetails{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	width: 274px;
+	height: 54px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #000000;
+	border: none;
+	margin: 27px 105px 24px 75px;
+}
+
+.askQuestion{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	width: 486px;
+	height: 70px;
+	background: #F5F5F5;
+	border-radius: 10px;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 143.9%;
+	color: #000000;
+	margin: 15px 15px 24px 14px;
+	border: none;
+}
+
+.toInteresting{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap: 18.16px;
+	margin-top: 314px;
+}
+
+.toInterestingText{
+	width: 129px;
+	height: 17px;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
+.toInterestingIcon{
+	color: #3931D1;
+}
+
+.moreAboutCourseIcon{
+	font-size: small;
+	color: #BFBFBF;
+	margin-top: 29.46px;
+}
+
+	.aboutTeam{
+		width: 1022px;
+		height: 528px;
+		background-image: url('');
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 75px;
+	}
+
+	.informAboutTeam{
+		background: linear-gradient(74.44deg, rgba(51, 49, 209, 0.7) -25.27%, rgba(97, 41, 221, 0.7) 82.39%);
+		backdrop-filter: blur(4px);
+		width: 1022px;
+		height: 528px;
+	}

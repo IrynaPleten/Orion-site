@@ -1,14 +1,11 @@
-html{
-	scroll-behavior: smooth;
-}
-
 .nearestCourse{
-	margin-top: 149px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
+	flex-wrap: wrap;
 	gap: 149px;
+	margin-top: 149px;
 }
 
 .aboutCourse{
@@ -17,8 +14,7 @@ html{
 }
 
 .author{
-	width: 211px;
-	height: 24px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 20px;
@@ -28,8 +24,7 @@ html{
 }
 
 .allCourses{
-	width: 514px;
-	height: 54px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 800;
 	font-size: 50px;
@@ -41,12 +36,13 @@ html{
 .corsesDescription{
 	width: 463px;
 	height: 50px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 22px;
 	color: #000000;
-	margin-top: 30px;
+	margin-top: 30px
 }
 
 .coursesTimeCost{
@@ -82,8 +78,8 @@ html{
 .courseTimeTitle,
 .coursePaymentTitle
 {
-	width: 48px;
 	height: 19px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 13px;
@@ -95,8 +91,8 @@ html{
 .courseTimeTable,
 .coursePaymentOpportunities
 {
-	width: 150px;
 	height: 22px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 700;
 	font-size: 15px;
@@ -120,7 +116,7 @@ html{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-	z-index: 100;
+	z-index: 1;
 }
 
 .nearestCoursesInformation{
@@ -129,26 +125,31 @@ html{
 	background: linear-gradient(65.01deg, #2221B7 -22.24%, #FC8383 110.74%);
 	border-radius: 10px;
 	padding-left: 32px;
+	margin-top: 18px;
 }
 
 .detailsOfNearestCourse{
 	display: flex;
 	flex-direction: row;
 	gap: 127px;
+	margin-top: 20.87px;
+	margin-bottom: 16px;
 }
 
 .courseBoxTitle{
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 600;
 	font-size: 18px;
 	line-height: 143.9%;
 	color: #000000;
-	margin: 24px 166px 18px 167px;
+	margin-top: 24px;
 }
 
-.nearestCourseName,
-.nearestCoursesStatus
+.nearestCourseNameTitle,
+.nearestCourseStatusTitle
 {
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
@@ -158,6 +159,7 @@ html{
 
 .nearestCourseText,
 .nearestCourseDateOfStart{
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 800;
 	font-size: 26px;
@@ -177,9 +179,11 @@ html{
 	flex-direction: row;
 	align-items: center;
 	gap: 17.21px;
+	margin-top: 31.12px;
 }
 
 .freePlaces{
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15px;
@@ -202,6 +206,7 @@ html{
 	height: 54px;
 	background: #FFFFFF;
 	border-radius: 10px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
 	font-size: 15px;
@@ -220,6 +225,7 @@ html{
 	height: 70px;
 	background: #F5F5F5;
 	border-radius: 10px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 500;
 	font-size: 15px;
@@ -241,6 +247,7 @@ html{
 .toInterestingText{
 	width: 129px;
 	height: 17px;
+	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 300;
 	font-size: 14px;
@@ -253,25 +260,297 @@ html{
 	color: #3931D1;
 }
 
-.moreAboutCourseIcon{
-	font-size: small;
-	color: #BFBFBF;
-	margin-top: 29.46px;
-}
 
-	.aboutTeam{
-		width: 1022px;
-		height: 528px;
-		background-image: url('');
+@media (max-width: 1025px){
+	.nearestCourse{
+		gap: 52px;
+		margin-top: 149px;
+
+	}
+	
+	.aboutCourse{
+		margin-top: 47px;
+		z-index: 1;
+	}
+
+	.information{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.courseBox{
+		width: 433px;
+		height: 369px;
+		border-radius: 20px;
+		background: #FFF;
+		box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.12);
+	}
+	
+	.nearestCoursesInformation{
+		width: 408.506px;
+		height: 220.223px;
+		border-radius: 10px;
+		padding-left: 27px;
+		margin-top: 15.16px;
+	}
+	
+	.detailsOfNearestCourse{
+		gap: 85px;
+		margin-top: 16.84px;
+		margin-bottom: 13.05px;
+	}
+	
+	.divider{
+		margin-left: 26.06px;
+		width: 356.392px;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+	
+	.numberOfFreePlaces{
+		width: 175px;
+		gap: 13.21px;
+		margin-top: 25.95px;
+	}
+	
+	.moreDetails{
+		width: 228px;
+		height: 46px;
+		padding: 10px;
+		border-radius: 10px;
+		margin: 21.25px 92px 20px 70px;
+	}
+	
+	.askQuestion{
+		width: 404px;
+		height: 58px;
+		padding: 10px;
+		border-radius: 10px;
+		margin: 15px 16px 18px 12px;
+		border: none;
+	}
+	
+	.toInteresting{
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-top: 75px;
+		flex-direction: column;
+		gap: 10.16px;
+		margin-top: 101px;
 	}
 
-	.informAboutTeam{
-		background: linear-gradient(74.44deg, rgba(51, 49, 209, 0.7) -25.27%, rgba(97, 41, 221, 0.7) 82.39%);
-		backdrop-filter: blur(4px);
-		width: 1022px;
-		height: 528px;
+}
+
+
+@media (max-width: 415px){
+	.nearestCourse{
+		margin-top: 102px;
 	}
+	
+	.author{
+		font-size: 16px;
+	}
+
+	.information{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 414px;
+	}
+
+	.allCourses{
+		font-size: 20px;
+		font-family: 'Montserrat';
+		font-weight: 800;
+		line-height: 108.336%;;
+		margin-top: 20px;
+	}
+
+	
+	.corsesDescription{
+		font-size: 13px;
+		margin-top: 20px;
+		width: 380px;
+	}
+	
+	.coursesTimeCost{
+		position: relative;
+		width: 365px;
+		height: 75px;
+		gap: 13px;
+		padding: 0px;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	.timeOfCourse,
+	.coursePayment
+	{
+		display: flex;
+		flex-direction: row;
+		gap: 6px;
+	}
+	
+	.courseTimeText,
+	.coursePaymentText
+	{
+		height: 30px;
+	}
+	
+	.courseTimeTitle,
+	.coursePaymentTitle
+	{
+		font-size: 12px;
+	}
+	
+	.courseTimeTable,
+	.coursePaymentOpportunities
+	{
+		font-size: 13px;
+	}
+	
+	.courseTimeIcon{
+		width: 30px;
+		height: 30px;
+	}
+	
+	.courseBox{
+		width: 380px;
+		height: 369px;
+		
+	}
+	
+	.nearestCoursesInformation{
+		width: 360px;
+		height: 262px;
+		background: linear-gradient(65.01deg, #2221B7 -22.24%, #FC8383 110.74%);
+		border-radius: 10px;
+		padding-left: 32px;
+		margin-top: 18px;
+	}
+	
+	.detailsOfNearestCourse{
+		display: flex;
+		flex-direction: row;
+		gap: 45px;
+		margin-top: 20.87px;
+		margin-bottom: 16px;
+	}
+	
+	.courseBoxTitle{
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 143.9%;
+		color: #000000;
+		margin-top: 24px;
+	}
+	
+	.nearestCourseNameTitle,
+	.nearestCourseStatusTitle
+	{
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 143.9%;
+		color:#FFFFFF;
+	}
+	
+	.nearestCourseText,
+	.nearestCourseDateOfStart{
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 800;
+		font-size: 26px;
+		line-height: 143.9%;
+		color: #FFFFFF;
+	}
+	
+	.divider{
+		margin-left: 32px;
+		width: 424px;
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+	
+	.numberOfFreePlaces{
+		width: 182px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 17.21px;
+		margin-top: 25.12px;
+	}
+	
+	.freePlaces{
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 143.9%;
+		color: #FFFFFF;
+	
+	}
+	
+
+	.moreDetails{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		width: 274px;
+		height: 54px;
+		background: #FFFFFF;
+		border-radius: 10px;
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 143.9%;
+		color: #000000;
+		border: none;
+		margin: 21px 0px 20px 15px;
+	}
+	
+	.askQuestion{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 10px;
+		width: 309px;
+		height: 58px;
+		background: #F5F5F5;
+		border-radius: 10px;
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 15px;
+		line-height: 143.9%;
+		color: #000000;
+		margin: 15px 15px 24px 14px;
+		border: none;
+	}
+	
+	.toInteresting{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 18.16px;
+		margin-top: 314px;
+	}
+	
+	.toInterestingText{
+		width: 129px;
+		height: 17px;
+		font-family: 'Montserrat';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 14px;
+		line-height: 17px;
+		text-transform: uppercase;
+		color: #000000;
+	}
+}

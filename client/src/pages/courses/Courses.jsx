@@ -1,7 +1,7 @@
 import { Divider } from '@mui/material'
 import './courses.css'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
-import { useEffect } from 'react';
+
 
 import clock from '../../img/icons/clock.svg'
 import money from '../../img/icons/money.svg'
@@ -12,30 +12,10 @@ import AboutTeam from '../../components/aboutTeam/AboutTeam';
 import Reviews from '../../components/reviews/Reviews';
 import Footer from '../../components/footer/Footer';
 import FormQuestion from '../../components/formQuestion/FormQuestion';
+import { CourseDesk } from '../../helpers/dummyDates.js';
 
 export const Courses =() => {
-	useEffect(() => {
-    const autoSizeFont = () => {
-      const container = document.getElementById("container");
-      const text = document.getElementById("text");
-
-      const containerWidth = container.offsetWidth - 9;
-      const textWidth = text.offsetWidth;
-
-      const fontSize = parseFloat(window.getComputedStyle(text).fontSize);
-
-      const newFontSize = (containerWidth / textWidth) * fontSize;
-
-      text.style.fontSize = newFontSize + "px";
-    };
-
-    window.addEventListener("resize", autoSizeFont);
-    autoSizeFont(); // Call the function initially
-
-    return () => {
-      window.removeEventListener("resize", autoSizeFont); // Clean up the event listener
-    };
-  }, []);
+	
 	return (
 		<div>
 			<Header/>
@@ -89,7 +69,9 @@ export const Courses =() => {
 			</div>
 
 			<Navigate/>
-			<CourseBlock/>
+			{CourseDesk.map((c, index) => {
+				<CourseBlock key={index} index={index} course={c}/>
+      })}
 			<AboutTeam/>
 			<Reviews/>
 			<FormQuestion/>

@@ -17,22 +17,7 @@
 	flex-direction: column;
 	margin-top: 86.16px;
 }
-.ourCoursesTitle{
-	font-style: normal;
-	font-weight: 800;
-	font-size: 40px;
-	line-height: 108.34%;
-	color: #1A1433;
-}
-.ourCoursesList{
-	margin-top: 56px;
-	max-width: 970px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	column-gap: 30px;
-	row-gap: 30px;
-}
+
 .ourCourse{
 	position: relative;
 	display: flex;
@@ -48,6 +33,17 @@
 	overflow: hidden;
 	
 }
+
+.ourCoursesList{
+	max-width: 970px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: 30px;
+	row-gap: 30px;
+	margin-top: 56px;
+}
+
 .borderCircle{
 	width: 144px;
 	min-height: 144px;
@@ -58,131 +54,7 @@
 	display: flex;
 	justify-content: center;
 }
-.colorCircle{
-	width: 121px;
-	height: 121px;
-	border-radius: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.courseName{
-	text-transform: uppercase;
-	font-style: normal;
-	font-weight: 800;
-	word-break: break-word;
-	font-size: 33px;
-	line-height: 108.34%;
-	color: #FFFFFF;
-	margin: 0px;
 
-}
-.courseDescription{
-	font-style: normal;
-	font-weight: 800;
-	font-size: 18px;
-	line-height: 126.34%;
-	text-align: center;
-	color: #000000;
-	margin-top: 30px;
-}
-.informAboutCourse{
-	width: 300px;
-	height: 250px;
-	background: #FFFFFF;
-	border-radius: 10px 10px 20px 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	z-index: 1;
-	padding-top: 12px;
-}
-.informTextData{
-	display: flex;
-	flex-direction: row;
-	gap: 39px;
-}
-.informText,
-.informData{
-	display: flex;
-	flex-direction: column;
-}
-
-.informText{
-	gap: 5px;
-}
-
-.informData{
-	gap: 1px;
-}
-
-.informText p{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 14px;
-	line-height: 17px;
-	text-transform: capitalize;
-	color: #141414;
-}
-
-.informData p{
-	font-style: normal;
-	font-weight: 800;
-	font-size: 16px;
-	line-height: 20px;
-	text-transform: capitalize;
-	background: linear-gradient(74.44deg, #3331D1 -25.27%, #933FEE 82.39%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	background-clip: text;
-	text-fill-color: transparent;
-}
-.statusOfRecrut{
-	font-style: normal;
-	font-weight: 400;
-	font-size: 13px;
-	line-height: 108.34%;
-	color: #454545;
-}
-.moreAboutCourse{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	width: 200px;
-	height: 33px;
-	padding: 3px 20px;
-	background: linear-gradient(74.44deg, #3331D1 -25.27%, #933FEE 82.39%);
-	box-shadow: 0px 4px 20px rgba(79, 0, 255, 0.35);
-	border-radius: 51px;
-	margin-top: 13px;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 15px;
-	line-height: 18px;
-	text-transform: capitalize;
-	color: #FFFFFF;
-	border: none;
-}
-.ourCourse:hover .moreAboutCourseIcon{
-	animation: rotateAndUp 1s forwards;
-}
-
-.ourCourse:hover .colorCircle{
-	transform: scale(5);
-	animation-duration: 2s;
-}
-
-.ourCourse:hover .courseName{
-	transform: scale(0.25) translateY(-30px);
-}
-
-.ourCourse:hover .informAboutCourse{
-	animation: fadeInUp 1s forwards;
-	animation-delay: 0.5s;
-}
 .color1{
 	background: linear-gradient(74.44deg, #3331D1 -25.27%, #933FEE 82.39%);
 }
@@ -207,6 +79,164 @@
 	background: linear-gradient(66.68deg, #3331D1 -28.6%, #29DD5B 134.41%);
 }
 
+.colorCircle{
+	width: 121px;
+	height: 121px;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+.courseName{
+	text-transform: uppercase;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	word-break: break-word;
+	font-size: 33px;
+	line-height: 108.34%;
+	color: #FFFFFF;
+	margin: 0px;
+
+}
+
+.courseDescription{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 126.34%;
+	text-align: center;
+	color: #000000;
+	margin-top: 30px;
+}
+
+.moreAboutCourseIcon{
+	font-size: small;
+	color: #BFBFBF;
+	margin-top: 29.46px;
+}
+
+.ourCoursesTitle{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 40px;
+	line-height: 108.34%;
+	color: #1A1433;
+}
+
+.informAboutCourse{
+	width: 300px;
+	height: 250px;
+	background: #FFFFFF;
+	border-radius: 10px 10px 20px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1;
+	padding: 30px 0px 22px 0px;
+}
+
+.informTextData{
+	display: flex;
+	flex-direction: row;
+	gap: 39px;
+}
+
+.informText,
+.informData{
+	display: flex;
+	flex-direction: column;
+}
+
+.informText{
+	gap: 13px;
+}
+
+.informData{
+	gap: 10px;
+}
+
+.informText p{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 17px;
+	text-transform: capitalize;
+	color: #141414;
+}
+
+.informData p{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 20px;
+	text-transform: capitalize;
+	background: linear-gradient(74.44deg, #3331D1 -25.27%, #933FEE 82.39%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+.moreAboutCourse{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 33px;
+	padding: 3px 20px;
+	background: linear-gradient(74.44deg, #3331D1 -25.27%, #933FEE 82.39%);
+	box-shadow: 0px 4px 20px rgba(79, 0, 255, 0.35);
+	border-radius: 51px;
+	margin-top: 20px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	text-transform: capitalize;
+	color: #FFFFFF;
+	border: none;
+}
+
+
+.statusOfRecrut{
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 108.34%;
+	color: #454545;
+	margin-top: 11px;
+}
+
+.ourCourse:hover .moreAboutCourseIcon{
+	animation: rotateAndUp 1s forwards;
+}
+
+.ourCourse:hover .colorCircle{
+	transform: scale(5);
+	animation-duration: 2s;
+}
+
+.ourCourse:hover .courseName{
+	transform: scale(0.25) translateY(-30px);
+}
+
+.ourCourse:hover .informAboutCourse{
+	animation: fadeInUp 1s forwards;
+	animation-delay: 0.5s;
+}
+
 @keyframes fadeInUp {
   from {
     transform: translate3d(0, 0, 0);
@@ -214,7 +244,7 @@
 
   to {
     opacity: 1;
-    transform: translate3d(0, -107%, 0);
+    transform: translate3d(0, -105%, 0);
   }
 }
 
@@ -231,10 +261,13 @@
 		} 
 	
 		to {
-			transform: translate3d(0, -251px, 0)  rotate(180deg);
+			transform: translate3d(0, -191px, 0)  rotate(180deg);
 		}
 
 	}
+
+
+
 /* .allCourseBlock {
 	position: relative;
 	margin-top: 111px;

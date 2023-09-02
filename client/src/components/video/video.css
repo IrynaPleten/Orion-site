@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin-top: 110px;
+	margin-top: 210px;
 	margin-bottom: 110px;
 }
 .video h1 {
@@ -44,7 +44,7 @@
 .arrow-clip {
 	width: 25px;
 	height: 25px;
-	background: url('../../img/arrow .svg');
+	background: url('../../../public/assets/img/arrow .svg');
 	margin-top: 54px;
 }
 .right {
@@ -59,3 +59,30 @@ video::-webkit-media-controls-play-button {
   border-radius: 50%;
 }
 
+
+@media (max-width: 1025px){
+	.video-block {
+		width: 906px;
+		height: 461px;
+	}
+
+}
+
+@media (max-width: 768px){
+	.video-block{
+		width: 580px;
+		height: 295px;
+	}
+
+}
+
+@media (max-width: 415px){
+	.video{
+		margin-top: 310px;
+	}
+	.video-block{
+		width: 301px;
+		height: 215px;
+	}
+
+}

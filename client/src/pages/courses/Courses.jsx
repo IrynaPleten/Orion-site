@@ -2,9 +2,6 @@ import { Divider } from '@mui/material'
 import './courses.css'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 
-
-import clock from '../../img/icons/clock.svg'
-import money from '../../img/icons/money.svg'
 import Header from '../../components/header/Header';
 import CourseBlock from '../../components/courseBlocks/CourseBlock';
 import Navigate from '../../components/navigate/Navigate';
@@ -13,8 +10,32 @@ import Reviews from '../../components/reviews/Reviews';
 import Footer from '../../components/footer/Footer';
 import FormQuestion from '../../components/formQuestion/FormQuestion';
 import { CourseDesk } from '../../helpers/dummyDates.js';
+import {motion} from 'framer-motion'
 
 export const Courses =() => {
+
+	const animation = {
+		hidden: {
+			y: 100,
+			opacity: 0,
+		},
+		visible: custom => ({
+			y: 0,
+			opacity: 1,
+			transition: {delay: custom * 0.1},
+			speed: 0.5
+		}),
+	}
+	const animationP = {
+		hidden: {
+			transform: 0,
+			opacity: 0,
+		},
+		visible: {
+			transform: 1,
+			opacity: 1,
+		}
+	}
 	
 	return (
 		<div>
@@ -28,14 +49,14 @@ export const Courses =() => {
 					</div>
 					<div className="coursesTimeCost">
 						<div className="timeOfCourse">
-							<img src={clock} alt="clock" className='courseTimeIcon'/>
+							<img src='assets/img/icons/clock.svg' alt="clock" className='courseTimeIcon'/>
 							<div className='courseTimeText'>
 								<p className="courseTimeTitle">Время</p>
-								<p className="courseTimeTable">Пн/Ср (18:00-21:00)</p>
+								<p className="courseTimeTable">{CourseDesk[0].time}</p>
 							</div>
 						</div>
 						<div className="coursePayment">
-							<img src={money} alt="money" className='coursePayment'/>
+							<img src='assets/img/icons/money.svg' alt="money" className='coursePayment'/>
 							<div className='coursePaymentText'>
 								<p className="coursePaymentTitle">Оплата</p>
 								<p className="coursePaymentOpportunities">Можно по частям</p>
@@ -50,17 +71,17 @@ export const Courses =() => {
 						<div className="detailsOfNearestCourse">
 							<div className="nearestCourseName">
 								<p className="nearestCourseNameTitle">Название курса:</p>
-								<h2 className="nearestCourseText">Design</h2>
+								<h2 className="nearestCourseText">{CourseDesk[0].title}</h2>
 							</div>
 							<div className="nearestCoursesStatus">
 								<p className="nearestCourseStatusTitle">Старт курса:</p>
-								<h2 className="nearestCourseDateOfStart">1 декабря</h2>
+								<h2 className="nearestCourseDateOfStart">{CourseDesk[0].startAt}</h2>
 							</div>
 						</div>
 						<Divider className='divider'/>
 						<div className="numberOfFreePlaces">
 							<PersonOutlineOutlinedIcon className='freePlacesIcon'/>
-							<p className="freePlaces">Осталось 2 места</p>
+							<p className="freePlaces">Осталось {CourseDesk[0].freePlaces}</p>
 						</div>
 						<button className="moreDetails">Подробнее</button>
 					</div>
@@ -69,9 +90,23 @@ export const Courses =() => {
 			</div>
 
 			<Navigate/>
-			{CourseDesk.map((c, index) => {
-				<CourseBlock key={index} index={index} course={c}/>
-      })}
+
+			<motion.div 
+       initial='hidden' whileInView={'visible'}
+       className="ourCourses" id='allBlock'>
+         <div className='background-wave'>
+           <img src='assets/img/courses/wave.svg' alt="#" />
+         </div>
+       <motion.h2 initial='hidden' whileInView={'visible'} variants={animationP} 
+         viewport={{ once: true}} custom={1}
+         className='ourCoursesTitle'>Наши курсы</motion.h2>
+         <motion.div initial='hidden' whileInView={'visible'}
+           className="ourCoursesList">
+						{CourseDesk.map((c, index) => <CourseBlock course={c} key={index} index={c.title} /> )}
+					 </motion.div>
+					
+				</motion.div> 
+       
 			<AboutTeam/>
 			<Reviews/>
 			<FormQuestion/>

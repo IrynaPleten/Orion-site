@@ -34,6 +34,13 @@
 	line-height: 20px;
 	color: var(--white);
 }
+
+.menu li{
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	color: var(--white);
+}
 .header img {
 	width: 100px;
 	height: 30px;

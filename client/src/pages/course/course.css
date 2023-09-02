@@ -1,8 +1,10 @@
 .nearestCourse {
 	display: flex;
-	justify-content: center;
-	gap: 192px;
 	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 192px;
 }
 .onlineStatus{
 	width: 129px;
@@ -44,7 +46,6 @@
 }
 
 .thisCourseName{
-	height: 54px;
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 800;
@@ -369,7 +370,7 @@
 	justify-content: center;
 	flex-direction: column;
 	gap: 63px;
-	width: 792px;
+	width: 982px;
 	/* margin-top: 142px; */
 	margin: 142px auto;
 }
@@ -385,6 +386,7 @@
 }
 
 .aboutProfessionText{
+
 	font-family: 'Montserrat';
 	font-style: normal;
 	font-weight: 400;
@@ -403,6 +405,7 @@
 	align-items: center;
 	justify-content: center;
 	margin: 54px auto; 
+	gap: 51px;
 }
 
 .aimOfCourse{
@@ -412,6 +415,7 @@
 	gap: 44px;
 	align-items: center;
 	padding: 35px 0px 40px 0px;
+	border-right: 1px solid #B8B8B8;
 }
 
 
@@ -478,6 +482,7 @@
 	display: flex;
 	flex-direction: column;
 	gap: 44px;
+	
 }
 
 .courseForWhomTitle{
@@ -530,8 +535,7 @@
 	font-size: 15px;
 	line-height: 143.9%;
 	/* identical to box height, or 22px */
-
-
+	margin-top: 22px;
 	color: #FFFFFF;
 }
 
@@ -650,13 +654,19 @@
 	transform: rotate(-90deg);
 }
 
+
+
 .moreInfoAboutPlanItem{
-	max-height: 203px;
-	max-width: 407px;
+ 	height:203px ;
+	width: 407px;
 	background: #FFFFFF;
 	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 	border-radius: 0px 10px 10px 0px;
 	padding: 31px 30px 52px 48px;
+}
+
+.moreInfoAboutPlanItemMainTitle:hover .moreInfoAboutPlanItem{
+	transform: translateY(-200px);
 }
 
 .moreInfoAboutPlanItemTitle{
@@ -798,7 +808,8 @@
 }
 
 
-@media (max-width: 1025px){
+
+@media (max-width: 1024px){
 	.nearestCourse {
 		gap: 48px;
 	}
@@ -832,15 +843,12 @@
 		width: 409px;
 		height: 220px;
 		margin-top: 15px;		
-		/* padding-left: 60px; */
 	}
 	
 	
 	.courseStartAtAndCost{
 		gap: 62px;
 		margin-bottom: 15.63px;
-		display: flex;
-		align-items: center;
 
 	}
 	
@@ -915,7 +923,6 @@
 	.coursePlanForList{
 		width: 997px;
 		height: 519px;
-		background: rgba(0, 0, 0, 0.08);
 		border-radius: 21px;
 		margin-top: 66px;
 		padding: 35px 41px 45px 42px;
@@ -929,149 +936,9 @@
 	.coursePlanForListTitles{
 		display: flex;
 		flex-direction: row;
-		gap: 357px;
+		gap: 257px;
 	}
-	
-	.coursePlanForListTitles p{
-		color: #FFF;
-		font-size: 15px;
-		font-family: 'Montserrat';
-		line-height: 108.336%;
-	}
-	
-	.coursePlanList{
-		width: 467px;
-		height: 400px;
-		overflow-y: auto;
-		border-radius: 10px 0px 0px 10px;
-	}
-	
-	.coursePlanList::-webkit-scrollbar{
-		width: 10px;
-	}
-	.coursePlanList::-webkit-scrollbar-thumb{
-		background: rgba(255, 255, 255, 0.51);
-		border-radius: 0px 0px 10px 10px;
-	} 
-	
-	 .coursePlanList::-webkit-scrollbar-track{
-		background: #3B2099;
-	}
-	
-	.coursePlanList_item{
-		max-width: 467px;
-		background: #F0F0F0;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 32px 30px 31px 31px;
-	}
-	
-	.numberOfProgramm{
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 25px;
-		line-height: 108.34%;
-		background: linear-gradient(74.44deg, #3331D1 -25.27%, #933FEE 82.39%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		text-fill-color: transparent;
-	}
-	
-	.nameOfProgram{
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 600;
-		font-size: 16px;
-		line-height: 108.34%;
-		color: #000000;
-	}
-	
-	.iconOfProgramm{
-		font-size: medium;
-		color: #8992A9;
-	}
-	
-	.coursePlanList_item:hover{
-		background: #FFFFFF;
-		box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.1);
-	}
-	
-	.coursePlanList_item:hover .iconOfProgramm{
-		color:  #933FEE;
-		transform: rotate(-90deg);
-	}
-	
-	.moreInfoAboutPlanItem{
-		max-height: 203px;
-		max-width: 407px;
-		background: #FFFFFF;
-		box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-		border-radius: 0px 10px 10px 0px;
-		padding: 31px 30px 52px 48px;
-	}
-	
-	.moreInfoAboutPlanItemTitle{
-		display: flex;
-		align-items: center;
-		flex-direction: row;
-		gap: 7px;
-	}
-	
-	.nameOfPrograminMoreInfo{
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 108.34%;
-		color: #000000;
-		margin: 0px;
-	}
-	
-	.infoAboutThisItem{
-		font-family: 'Montserrat';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 149%;
-		color: #000000;
-		margin: 0px;
-	}
-	
-	.getSertificate{
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: row;
-		gap: 26px;
-		margin-top: 118px;
-	}
-	
-	.getSertificateCircle{
-		width: 90px;
-		height: 90px;
-		border-radius: 90px;
-		border: 1px solid #FFF;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	
-	.getSertificateIcon{
-		color: #FFF;
-	}
-	
-	.getSertificateText{
-		color: #FFF;
-		font-size: 20px;
-		font-family: Montserrat;
-		font-weight: 700;
-		text-decoration-line: underline;
-	}
-	
-	
+
 	
 	.form-join {
 		position: relative;
@@ -1079,75 +946,231 @@
 		margin-bottom: 156px;
 	}
 	.join-block {
-		align-self: center;
-		width: 1180px;
-		height: 248px;
-		background-image: linear-gradient(75deg, #3331D1, #933FEE);
-		border-radius: 0px 50px 0px 50px;
-		box-shadow: 0px, 4px rgba(0, 0, 0, 0.2);
-		
-		padding: 40px 100px;
-		margin-bottom: -120px;
-		margin-left: calc((100% - 1180px)/ 2);
-	
+		width: 980px;
+		height: 248px;	
+		margin-left: calc((100% - 980px)/ 2);
+	}
+	.courseVideo{
+		margin-top: 156px;
+	}
+}
+
+
+
+@media (max-width: 768px){
+	.nearestCourse {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		position: relative;
-		overflow: hidden;
+		justify-content: center;
+	}
+
+	.aboutThisCourse, .courseInformation{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		z-index: 1;
 	}
 	
-	.join-str {
-		font-weight: 400;
-		font-size: 20px;
-		line-height: 24px;
-		text-transform: uppercase;
-		color: var(--white);
+	
+	.courseInformation{
+		width: 421px;
+		margin-top: 39px;
 	}
+	
+	.aboutProfession{
+		width: 699px;
+	}
+
+	.aimOfCourseAndForWhom{
+		width: 709px;
+		padding: 3px 20px;
+		gap: 15px;
+	}
+	
+	.coursePlanForList{
+		width: 768px;
+		height: 487px;
+		border-radius: 21px;
+		margin-top: 66px;
+		padding: 32px 35px 39px 31px;
+		display: flex;
+		flex-direction: row;
+		gap: 15px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.coursePlanForListTitles{
+		display: flex;
+		flex-direction: row;
+		gap: 247px;
+	}
+
+	.coursePlanList{
+		width: 370px;
+	}
+
+	.coursePlanListItem{
+		width: 360.5px;
+	}
+
+	.moreInfoAboutPlanItem{
+		width: 311px;
+	}
+
+	
+	.form-join {
+		position: relative;
+		margin-top: 132px;
+		margin-bottom: 156px;
+	}
+	.join-block {
+		width: 692px;
+		height: 248px;	
+		margin-left: calc((100% - 692px)/ 2);
+		padding: 29px 20px 59px 75px; 
+	}
+
+
 	.join-title {
 		font-weight: 800;
-		font-size: 50px;
+		font-size: 35px;
 		line-height: 108.34%;
 		text-transform: uppercase;
 		color: var(--white);
 	}
 	.join-lorem {
-		width: 482px;
-		height: 46px;
+		width: 339px;
+	}
 	
-		font-weight: 400;
-		font-size: 15px;
-		line-height: 22px;
+}
+
+@media (max-width: 415px){
+	.courseInformation{
+		width: 370px;
+		margin-top: 39px;
+	}
+
+	.coursesTimeAndCost{
+		width: 365px;
+		gap: 9px;
+		padding-left: 10px;
+	}
+
+	.courseTimetable,
+.coursePaymentPerMonthOpportunities
+{
+	font-size: 13px;
+}
+	
+	.aboutProfession{
+		width: 377px;
+	}
+
+	.aimOfCourseAndForWhom{
+		width: 380px;
+		padding: 6px 20px;
+		gap: 15px;
+		flex-wrap: wrap;
+	}
+
+	.aimOfCourse{
+		border-right: none;
+		border-bottom: 1px solid #B8B8B8;
+	}
+
+	.courseForWhom{
+		gap: 19px;
+		
+	}
+
+	.courseForWhomButton{
+		margin-top: 15px;
+	}
+	
+	.coursePlanForList{
+		width: 414px;
+		height: 487px;
+		border-radius: 21px;
+		margin-top: 66px;
+		padding: 39px 14px 53px 16px;
+		display: flex;
+		flex-direction: row;
+		gap: 15px;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	
+	.coursePlanForListTitles{
+		display: flex;
+		flex-direction: row;
+		gap: 247px;
+	}
+
+	.moreInfoAboutPlanItemMainTitle{
+		display: none;
+	}
+
+	.moreInfoAboutPlanItem{
+		display: none;
+	}
+
+	.coursePlanList{
+		width: 390px;
+	}
+
+	.coursePlanListItem{
+		width: 373px;
+	}
+
+	.getSertificate{
+		flex-direction: column;
+		width: 232px;
+		align-items: center;
+		padding-left: 6px;
+	}
+
+	.getSertificateText{
+		font-size: 16px;
+	
+	}
+	
+	.form-join {
+		position: relative;
+		margin-top: 132px;
+		margin-bottom: 156px;
+	}
+	.join-block {
+		width: 379px;
+		height: 309px;	
+		margin-left: calc((100% - 379px)/ 2);
+		padding: 20px 43px;
+		flex-direction: column; 
+		align-items: center;
+	}
+
+	.join-content{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 13px;
+	}
+
+
+	.join-title {
+		font-weight: 800;
+		font-size: 35px;
+		line-height: 108.34%;
+		text-transform: uppercase;
 		color: var(--white);
 	}
-	.join-str + .join-title {
-		margin-top: 15px;
-	}
-	.join-title + .join-lorem {
-		margin-top: 15px;
-	}
-	.join-btn {
-		z-index: 200;
-		width: 270px;
-		height: 65px;
-		background: #FFFFFF;
-		box-shadow: 0px 8px 20px rgba(10, 7, 7, 0.516);
-		border-radius: 51px;
-	
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 20px;
-		text-transform: capitalize;
-		transition: 0.1s ease;
-		color: var(--black);
-	}
-	.join-btn:hover{
-		transition-duration: 500ms;
-		background-image: linear-gradient(90deg, #9796F0, #FBC7D4);
-		transform: scale(1.3);
+	.join-lorem {
+		display: flex;
+		align-items: center;
+		width: 339px;
 	}
 	
-	.courseVideo{
-		margin-top: 156px;
-	}
+
 }

@@ -5,10 +5,9 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
-import ava from '../../img/ava/ava-user.svg'
-import arrow from '../../img/ava/arrow-right.svg'
 
 export default class Reviews extends React.Component {
+	
 	render() {
 		const settings = {
 			dots: true,
@@ -18,6 +17,8 @@ export default class Reviews extends React.Component {
       slidesToScroll: 1,
 			className: 'slider',
 		};
+
+		const PF = process.env.REACT_APP_PUBLIC_FOLDER
 	return (
 
 		<div className="reviews">
@@ -29,7 +30,7 @@ export default class Reviews extends React.Component {
 							<Slider {...settings}>
 								<div className='block-slider'>
 									<div className="review-block">
-										<img src={ava} alt="#" />
+										<img src={PF + 'img/ava/ava-user.svg'} alt="#" />
 										<div className='review-text'>
 											<h1>Кирилл</h1>
 											<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. </p>
@@ -39,7 +40,7 @@ export default class Reviews extends React.Component {
 							
 								<div>
 									<div className="review-block">
-										<img src={ava} alt="#" />
+										<img src={PF + 'img/ava/ava-user.svg'} alt="#" />
 										<div className='review-text'>
 											<h1>Кирилл</h1>
 											<p>Давно выяснено, что при оценке дизайна и композиции</p>
@@ -49,7 +50,7 @@ export default class Reviews extends React.Component {
 							
 								<div>
 									<div className="review-block">
-										<img src={ava} alt="#" />
+										<img src={PF + 'img/ava/ava-user.svg'} alt="#" />
 										<div className='review-text'>
 											<h1>Кирилл</h1>
 											<p>Давно выяснено, что при оценке дизайна и композиции</p>
@@ -59,7 +60,7 @@ export default class Reviews extends React.Component {
 							
 								<div>
 									<div className="review-block">
-										<img src={ava} alt="#" />
+										<img src={PF + 'img/ava/ava-user.svg'} alt="#" />
 										<div className='review-text'>
 											<h1>Кирилл</h1>
 											<p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Давно выяснено, что при</p>
@@ -71,7 +72,7 @@ export default class Reviews extends React.Component {
 							
 					
 				<button className='btn-review'>Добавить отзыв
-					<img src={arrow} alt="#" />
+					<img src={PF + 'img/ava/arrow-right.svg'} alt="#" />
 				</button>
 			</div>
 	)

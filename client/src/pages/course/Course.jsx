@@ -1,45 +1,63 @@
 import { Divider } from '@mui/material'
-import React from 'react'
+import React, { useState } from 'react'
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import './course.css'
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import SchoolRoundedIcon from '@mui/icons-material/SchoolRounded';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 
-import clock from '../../img/icons/clock.svg'
-import money from '../../img/icons/money.svg'
-import technologies from '../../img/technologies/devtools-icon 1 1.svg'
-import Header from '../../components/header/Header';
-import Video from '../../components/video/Video';
-import Companies from '../../components/companies/Companies';
-import Reviews from '../../components/reviews/Reviews';
-import FormQuestion from '../../components/formQuestion/FormQuestion';
-import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header'
+import Video from '../../components/video/Video'
+import Companies from '../../components/companies/Companies'
+import Reviews from '../../components/reviews/Reviews'
+import FormQuestion from '../../components/formQuestion/FormQuestion'
+import Footer from '../../components/footer/Footer'
+import { useParams } from 'react-router-dom'
+import { CourseDesk } from '../../helpers/dummyDates'
+import TechnologiesUnderStudy from '../../components/technologiesUnderStudy/TechnologiesUnderStudy'
+import CoursePlanList from '../../components/coursePlanList/CoursePlanList'
+import MoreInfoAboutPlanItem from '../../components/moreInfoAboutPlanItem/MoreInfoAboutPlanItem'
+import AimOfCourseList from '../../components/aimOfCourseList/AimOfCourseList'
 
 export const Course =() => {
+
+	const {title} = useParams();
+	const course = CourseDesk.find((c) => c.title === title);
+
+	const [selectedPlanItem, setSelectedPlanItem] = useState(null);
+
+ 
+	const handleItemClick = (index) => {
+    setSelectedPlanItem(index);
+  };
+
+	const PF = process.env.REACT_APP_PUBLIC_FOLDER
+
 	return (
 		<div>
-			<Header/>
-			<div className="nearestCourse">
+			<Header />
+			<div className="nearestCourse" onLoad={() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'instant'});
+  }}>
 				<div className="aboutThisCourse">
 					<div className="onlineStatus">
 						<p className='onlineStatusText'>Online</p>
 					</div>
 					<div className="courseInformation">
 						<h2 className="courseAuthor">Авторские курсы</h2>
-						<h1 className="thisCourseName">КУРС по QA</h1>
+						<h1 className="thisCourseName">КУРС по {course.title}</h1>
 						<p className="thisCorsesDescription">Запишитесь пожауйста, иначе злой начальник меня уволит, умоляю вас, не проходите мимо </p>
 					</div>
 					<div className="coursesTimeAndCost">
 						<div className="timeOfThisCourse">
-							<img src={clock} alt="clock" className='courseTimeImg'/>
+							<img src={PF + 'img/icons/clock.svg' } alt="clock" className='courseTimeImg'/>
 							<div className='courseTimeAndText'>
 								<p className="courseTimeName">Время</p>
-								<p className="courseTimetable">Пн/Ср (18:00-21:00)</p>
+								<p className="courseTimetable">{course.time}</p>
 							</div>
 						</div>
 						<div className="coursePaymentPerMonth">
-							<img src={money} alt="money" className='coursePaymentImg'/>
+							<img src={PF + 'img/icons/money.svg'} alt="money" className='coursePaymentImg'/>
 							<div className='coursePaymentPerMonthText'>
 								<p className="coursePaymentPerMonthTitle">Оплата</p>
 								<p className="coursePaymentPerMonthOpportunities">Можно по частям</p>
@@ -56,22 +74,22 @@ export const Course =() => {
 							<div className="courseStartAtAndCost">
 								<div className="courseStartAt">
 									<p className="courseStartAtTitle">Старт курса:</p>
-									<h2 className="courseStartAtText">1 Декабря</h2>
+									<h2 className="courseStartAtText">{course.startAt}</h2>
 								</div>
 								<div className="thisCourseCost">
 									<p className="thisCourseCostTitle">Стоимость:</p>
-									<h2 className="thisCourseCostText">4000грн</h2>
+									<h2 className="thisCourseCostText">{course.cost}</h2>
 								</div>
 							</div>
 							<Divider className='courseDivider'/>
 							<div className="durationAndNumberOfLessons">
 								<div className="duration">
 									<p className="durationTitle">Продолжительность:</p>
-									<h2 className="durationText">4,5 месяцев</h2>
+									<h2 className="durationText">{course.duration}</h2>
 								</div>
 								<div className="courseNumberOfLessons">
 									<p className="courseNumberOfLessonsTitle">Количество занятий:</p>
-									<h2 className="courseNumberOfLessonsText">36 занятий</h2>
+									<h2 className="courseNumberOfLessonsText">{course.numberOfLessons}</h2>
 								</div>
 							</div>
 							
@@ -79,7 +97,7 @@ export const Course =() => {
 						
 						<div className="thisCoursenumberOfFreePlaces">
 							<PersonOutlineOutlinedIcon className='freePlacesIcon'/>
-							<p className="freePlaces">Осталось 2 места</p>
+							<p className="freePlaces">Осталось {course.freePlaces}</p>
 						</div>
 
 					</div>
@@ -99,51 +117,13 @@ export const Course =() => {
 			<div className="technologiesUnderStudy">
 				<h1 className="technologiesUnderStudyTitle">Изучаемые технологии</h1>
 				<div className="technologiesUnderStudyBox">
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
-
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
-
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
-
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
-
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
-
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
-
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
-
-					<div className="technologiesUnderStudy_example">
-						<img src={technologies} alt="technologiesUnderStudy_devTools" className="technologiesUnderStudyImg" />
-						<h2 className='technologiesUnderStudyText'>DevTools</h2>
-					</div>
+				{course.technologiesUnderStudy.map((t) => <TechnologiesUnderStudy key={t.id} technology={t}/> )}
 				</div>
 			</div>
 
 			<div className="aboutProfession">
-				<h1 className="aboutProfessionTitle">О професии QA</h1>
-				<p className="aboutProfessionText"><b>Front-End</b> — в наше время, пожалуй, быстрее всего развивающаяся область программирования. С другой стороны, эти технологии достаточно устоявшиеся и распространены практически повсеместно, ведь браузер есть во многих электронных устройствах.</p>
+				<h1 className="aboutProfessionTitle">О професии {course.title}</h1>
+				<p className="aboutProfessionText"><b>{course.title}</b> — {course.aboutCourse}</p>
 			</div>
 
 
@@ -154,20 +134,7 @@ export const Course =() => {
 						<h1 className="aimOfCorseTitleText">Цель курса</h1>
 					</div>
 					<div className="aimOfCourseList">
-						<div className='aimOfCourseList_item'>
-							<div className="circleAimOfCourseList_item"></div>
-							<p>Быстрее всего развивающаяся область программирования</p>
-						</div>
-
-						<div className='aimOfCourseList_item'>
-							<div className="circleAimOfCourseList_item"></div>
-							<p>Быстрее всего развивающаяся область программирования</p>
-						</div>
-
-						<div className='aimOfCourseList_item'>
-							<div className="circleAimOfCourseList_item"></div>
-							<p>Быстрее всего развивающаяся область программирования</p>
-						</div>
+						{course.aimOfCourseList.map((a) => <AimOfCourseList aim={a}/> )}
 
 						<div className='aimOfCourseList_item'>
 							<div className="circleAimOfCourseList_item"></div>
@@ -183,7 +150,7 @@ export const Course =() => {
 						<h1 className="courseForWhomTitleText">Для кого курс</h1>
 					</div>
 					<div className="courseForWhomTextAndButton">
-						<p className="courseForWhomText">Курс рассчитан на специалистов, умеющих верстать, на базовом уровне знакомых с JavaScript и желающих углубить свои знания.</p>
+						<p className="courseForWhomText">{course.whoCanTakeCourse}</p>
 						<button className="courseForWhomButton">Задать вопрос</button>
 					</div>
 				</div>
@@ -202,56 +169,40 @@ export const Course =() => {
 						<p className="moreInfoAboutPlanItemMainTitle">Подробнее о теме:</p>
 					</div>
 					<div className="coursePlanList">
-						<div className="coursePlanList_item">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfProgram">Начало</p>
-							<ArrowDropDownIcon className='iconOfProgramm'/>
-						</div>
-
-						<div className="coursePlanList_item">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfProgram">Начало</p>
-							<ArrowDropDownIcon className='iconOfProgramm'/>
-						</div>
-
-						<div className="coursePlanList_item">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfProgram">Начало</p>
-							<ArrowDropDownIcon className='iconOfProgramm'/>
-						</div>
-
-						<div className="coursePlanList_item">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfProgram">Начало</p>
-							<ArrowDropDownIcon className='iconOfProgramm'/>
-						</div>
-
-						<div className="coursePlanList_item">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfProgram">Начало</p>
-							<ArrowDropDownIcon className='iconOfProgramm'/>
-						</div>
-
-						<div className="coursePlanList_item">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfProgram">Начало</p>
-							<ArrowDropDownIcon className='iconOfProgramm'/>
-						</div>
-
-						<div className="coursePlanList_item">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfProgram">Начало</p>
-							<ArrowDropDownIcon className='iconOfProgramm'/>
+					<div className="coursePlanListItem">
+						{course.coursePlan.map((p, index) => <CoursePlanList index={index} key={index} planItem={p} toggleExpansion={() => handleItemClick(index)} />)}
 						</div>
 					</div>
 
-					<div className="moreInfoAboutPlanItem">
-						<div className="moreInfoAboutPlanItemTitle">
-							<p className="numberOfProgramm">1.</p>
-							<p className="nameOfPrograminMoreInfo">Начало</p>
-						</div>
-						<p className="infoAboutThisItem">Курс рассчитан на специалистов, умеющих верстать, на базовом уровне знакомых с JavaScript и желающих углубить свои знания.</p>
-					</div>
+					{ selectedPlanItem === null ? (
+						<div className="moreInfoAboutPlanItem">
+              <div className="moreInfoAboutPlanItemTitle">
+                <p className="numberOfProgramm">
+                  {course.coursePlan[0].number}
+                </p>
+                <p className="nameOfPrograminMoreInfo">
+                  {course.coursePlan[0].name}
+                </p>
+              </div>
+              <p className="infoAboutThisItem">
+                {course.coursePlan[0].description}
+              </p>
+            </div>
+					) : selectedPlanItem !== null ? (
+            <div className="moreInfoAboutPlanItem">
+              <div className="moreInfoAboutPlanItemTitle">
+                <p className="numberOfProgramm">
+                  {course.coursePlan[selectedPlanItem].number}
+                </p>
+                <p className="nameOfPrograminMoreInfo">
+                  {course.coursePlan[selectedPlanItem].name}
+                </p>
+              </div>
+              <p className="infoAboutThisItem">
+                {course.coursePlan[selectedPlanItem].description}
+              </p>
+            </div>
+          ) : null}
 				</div>
 
 				<div className="getSertificate">

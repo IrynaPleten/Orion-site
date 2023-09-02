@@ -13,7 +13,7 @@
 	color: var(--black);
 }
 .arrow {
-	background: url('../../img/arrow .svg');
+	background: url('../../../public/assets/img/arrow .svg');
 	width: 26px;
 	height: 26px;
 }

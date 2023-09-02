@@ -126,5 +126,5 @@
 	margin-top: -60%;
 	align-self: flex-end;
 	background: none;
-	background-image: url('../../img/close.svg');
+	background-image: url('../../../public/assets/img/close.svg');
 }

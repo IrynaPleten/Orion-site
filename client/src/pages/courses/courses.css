@@ -260,6 +260,9 @@
 	color: #3931D1;
 }
 
+.background-wave{
+	z-index: auto;
+}
 
 @media (max-width: 1025px){
 	.nearestCourse{

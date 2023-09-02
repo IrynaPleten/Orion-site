@@ -3,7 +3,7 @@
 .aboutCompany {
 	width: 100%;
 	height: 557px;
-	background-image: url('../../img/aboutCompany/company-photo.svg');
+	background-image: url('../../../public/assets/img/aboutCompany/company-photo.svg');
 	position: relative;
 	margin-top: 125px;
 }

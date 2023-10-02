@@ -1,26 +1,21 @@
 import Header from '../../components/header/Header'
-import './home.css'
+import s from './home.module.css'
 
 
 import React from 'react'
 
 import Footer from '../../components/footer/Footer'
 import CourseBlock from '../../components/courseBlocks/CourseBlock'
-import Reviews from '../../components/reviews/Reviews'
 import Video from '../../components/video/Video'
 import Companies from '../../components/companies/Companies'
 import FormQuestion from '../../components/formQuestion/FormQuestion'
 import Navigate from '../../components/navigate/Navigate'
 import AboutTeam from '../../components/aboutTeam/AboutTeam'
-
-
 import {motion} from 'framer-motion'
 import { CourseDesk } from '../../helpers/dummyDates'
-
-
+import Reviews from '../../components/reviews/Reviews'
 
 export const Home = () => {
-	
 	const animation = {
 		hidden: {
 			y: 100,
@@ -43,24 +38,24 @@ export const Home = () => {
 			opacity: 1,
 		}
 	}
+	const PF = process.env.REACT_APP_PUBLIC_FOLDER
 	return (
-		
 		<>
-
 			<Header/>
-			<div className="slider">
-				<div className='poster'>
-					<div className="titles">
-						<p className='title'>Авторские курсы</p>
-						<h1>Фантастические курсы по IT</h1>
-						<p className='about'>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. </p>
 
-						<div className='input'>
-						<input className='numberPhone' type="number" placeholder='Ваш телефон' />
-						<button className='phone-btn' type='submit'>Перезвонить мне</button>
+			<div className={s.slider}>
+				<div className={s.poster}>
+					<div className={s.titles}>
+						<p className={s.title}>Авторские курсы</p>
+						<h1>Фантастические курсы по IT</h1>
+						<p className={s.about}>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. </p>
+
+						<div className={s.input}>
+						<input className={s.numberPhone} type="number" placeholder='Ваш телефон' />
+						<button className={s.phone_btn} type='submit'>Перезвонить мне</button>
 						</div>
 					</div>
-					<img className='photo' src='assets/img/macbook.svg' alt="#" />
+					<img className={s.photo} src={PF + 'img/macbook.svg'} alt="#" />
 				</div>
 			</div>
 
@@ -80,15 +75,12 @@ export const Home = () => {
 					 </motion.div>
 					
 				</motion.div> 
-
-			
 				<AboutTeam/>
 				<Companies/>
 				<Reviews/>
-				<Video/>
+				 <Video/>
 				<FormQuestion/>
-			<Footer/>
-			
+			<Footer/> 
 		</>
 	)
 }

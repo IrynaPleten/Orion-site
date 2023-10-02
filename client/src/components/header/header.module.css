@@ -1,4 +1,4 @@
-.header-block {
+.header_block {
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
@@ -28,24 +28,20 @@
 .menu {
 	display: flex;
 	gap: 40px;
-
+}
+.link {
+	color: rgba(255, 255, 255, 1);
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
-	color: var(--white);
+	font-family: 'Montserrat';
 }
 
-.menu li{
-	font-weight: 400;
-	font-size: 16px;
-	line-height: 20px;
-	color: var(--white);
-}
 .header img {
 	width: 100px;
 	height: 30px;
 }
-.hed-button {
+.btn {
 	width: 200px;
 	height: 51px;
 	background: var(--white);
@@ -57,3 +53,4 @@
 	line-height: 20px;
 	color: var(--black);
 }
+

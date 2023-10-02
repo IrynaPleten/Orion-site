@@ -1,0 +1,141 @@
+.contact_wrap {
+  margin-bottom: 232px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 179px;
+  margin-top: 167px;
+}
+.contact_text {
+  width: 463px;
+  height: 237px;
+  margin-bottom: 180px;
+}
+
+.author{
+	color: #000;
+	font-family: Montserrat;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-transform: uppercase;
+}
+
+.corsesDescription{
+	color: #000;
+	font-family: Montserrat;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 143.9%;
+}
+
+.information{
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.allCourses{
+	color: #1A1433;
+	font-family: Montserrat;
+	font-size: 50px;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 108.336%;
+
+}
+
+.toConnect {
+
+  width: 435px;
+  height: 75px;
+  border: 1px solid #B8B8B8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 34px;
+  justify-content: space-around;
+  margin-top: 40px;
+  background: transparent;
+}
+.address {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.number_phone {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.full {
+  color: var(--black);
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 143.9%;
+}
+.feedBack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 515px;
+  height: 476px;
+  border-radius: 20px;
+  background: #FFF;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.12);
+  z-index: 100;
+}
+.title_form {
+  margin-top: 34px;
+  color: var(--black);
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.input_wrap {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.name, .numberPhone {
+  width: 400px;
+  height: 55px;
+  border-radius: 40px;
+  background: var(--white);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+
+  color: #5C5C5C;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-left: 40px;
+}
+.textarea_feedBack {
+  resize: none;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+  background: var(--white);
+  padding: 15px 18px 40px 15px;
+}
+.btn {
+  width: 299px;
+  height: 55px;
+  margin-top: 25px;
+  border-radius: 10px;
+  background: var(--bg, linear-gradient(58deg, #3331D1 0%, #933FEE 100%));
+
+  color: var(--white);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 143.9%;
+}

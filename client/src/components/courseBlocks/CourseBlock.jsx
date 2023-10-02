@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import {motion} from 'framer-motion'
 import { NavLink, useParams } from 'react-router-dom';
 
-import ScaleText from "react-scale-text"
+
 
 
 
@@ -15,28 +15,6 @@ import ScaleText from "react-scale-text"
 export default function CourseBlock({ course, index }) {
 	
 
-	// useEffect(() => {
-  //   const autoSizeFont = () => {
-  //     const container = document.getElementById("container");
-  //     const text = document.getElementById("text");
-
-  //     const containerWidth = container.offsetWidth - 9;
-  //     const textWidth = text.offsetWidth;
-
-  //     const fontSize = parseFloat(window.getComputedStyle(text).fontSize);
-
-  //     const newFontSize = (containerWidth / textWidth) * fontSize;
-
-  //     text.style.fontSize = newFontSize + "px";
-  //   };
-
-  //   window.addEventListener("resize", autoSizeFont);
-  //   autoSizeFont(); // Call the function initially
-
-  //   return () => {
-  //     window.removeEventListener("resize", autoSizeFont); // Clean up the event listener
-  //   };
-  // }, []);
 
 	const animation = {
 		hidden: {

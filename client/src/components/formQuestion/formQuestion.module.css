@@ -1,8 +1,8 @@
-// form-question 
-.form-questions {
+
+.form_questions {
 	position: relative;
 }
-.questions-block {
+.questions_block {
 	align-self: center;
 	width: 1180px;
 	height: 248px;
@@ -20,35 +20,35 @@
 	position: relative;
 	overflow: hidden;
 }
-.diagonal-left,
-.diagonal-center{
+.diagonal_left,
+.diagonal_center{
 	position: absolute;
   width: 690px;
   height: 280px;
   background-image: linear-gradient(90deg, #ffffff05, #ffffff10);
   transform: rotate(135deg);
 }
-.diagonal-left {
+.diagonal_left {
 	left: -430px;
 }
-.diagonal-center {
+.diagonal_center {
 	left: 390px;
 }
-.quest-str {
+.quest_str {
 	font-weight: 400;
 	font-size: 20px;
 	line-height: 24px;
 	text-transform: uppercase;
 	color: var(--white);
 }
-.question-title {
+.question_title {
 	font-weight: 800;
 	font-size: 50px;
 	line-height: 108.34%;
 	text-transform: uppercase;
 	color: var(--white);
 }
-.question-lorem {
+.question_lorem {
 	width: 482px;
 	height: 46px;
 
@@ -57,13 +57,13 @@
 	line-height: 22px;
 	color: var(--white);
 }
-.quest-str + .question-title {
+.quest_str + .question_title {
 	margin-top: 15px;
 }
-.question-title + .question-lorem {
+.question_title + .question_lorem {
 	margin-top: 15px;
 }
-.question-btn {
+.btn {
 	z-index: 200;
 	width: 270px;
 	height: 65px;
@@ -78,7 +78,7 @@
 	transition: 0.1s ease;
 	color: var(--black);
 }
-.question-btn:hover{
+.btn:hover{
 	transition-duration: 500ms;
 	background-image: linear-gradient(90deg, #9796F0, #FBC7D4);
 	transform: scale(1.3);

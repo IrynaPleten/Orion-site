@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Courses, Home, Course } from "./pages/index";
+import { Courses, Home, Course, Contacts } from "./pages/index";
 
 function App() {
   
@@ -11,6 +11,7 @@ function App() {
         <Route path="/" element={<Home />}/>
         <Route path='/course/:title' element={<Course/>} />
         <Route path='/courses' element={<Courses/>} />
+        <Route path='/contacts' element={<Contacts/>}/>
       </Routes>
     </div>
   );

@@ -1,41 +1,30 @@
-import './header.css'
+import h from './header.module.css'
 import React, { useState } from 'react'
+import {Link} from 'react-router-dom'
 
 
 import ModalWindow from '../modalWindow/ModalWindow'
-import { Link } from 'react-router-dom'
 
 export default function Header() {
+	const [modalActive, setModalActive] = useState(false)
 
 	const PF = process.env.REACT_APP_PUBLIC_FOLDER
-
-	const [modalActive, setModalActive] = useState(false)
 	return (
-		<div className='header-block'>
+		<div className={h.header_block}>
 				
-			<div className="background">
+			<div className={h.background}>
 				<img src={PF + 'img/background.svg'} alt="#" />
 			</div>
 				
-			<div className='header'>
-				<Link to='/'>
-					<img src={PF + 'img/logo.svg'} alt="#" />
-				</Link>
-				
-				<ul className='menu'>
-					<Link to='/'>
-						<li>Главная</li>
-					</Link>
-					<Link to='/courses'>
-						<li>Курсы</li>
-					</Link>
-					<Link to='/'>
-						<li>Контакты</li>
-					</Link>
-					
-				</ul>
+			<div className={h.header}>
+				<img src={PF + 'img/logo.svg'} alt="#" />
+				<nav className={h.menu}>
+					<Link className={h.link} to="/">Главная</Link>
+					<Link className={h.link} to="/courses">Курсы</Link>
+					<Link className={h.link} to="/contacts">Контакты</Link>
+				</nav>
 				<button onClick={() => setModalActive(true)}
-				className='hed-button' type='submit'>Записаться</button>
+				className={h.btn} type='submit'>Записаться</button>
 			</div>
 			<ModalWindow active={modalActive} setActive={setModalActive}/>
 		</div>

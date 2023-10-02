@@ -6,11 +6,15 @@ import Header from '../../components/header/Header';
 import CourseBlock from '../../components/courseBlocks/CourseBlock';
 import Navigate from '../../components/navigate/Navigate';
 import AboutTeam from '../../components/aboutTeam/AboutTeam';
-import Reviews from '../../components/reviews/Reviews';
+import Reviews from '../../components/reviews/Reviews'
+
 import Footer from '../../components/footer/Footer';
 import FormQuestion from '../../components/formQuestion/FormQuestion';
 import { CourseDesk } from '../../helpers/dummyDates.js';
 import {motion} from 'framer-motion'
+import { Link } from 'react-router-dom';
+import ModalQuestion from '../../components/modalQuestion/ModalQuestion';
+import React, { useState } from 'react'
 
 export const Courses =() => {
 
@@ -36,6 +40,8 @@ export const Courses =() => {
 			opacity: 1,
 		}
 	}
+
+	const [activeModal, setActiveModal] = useState(false)
 	
 	return (
 		<div>
@@ -83,9 +89,12 @@ export const Courses =() => {
 							<PersonOutlineOutlinedIcon className='freePlacesIcon'/>
 							<p className="freePlaces">Осталось {CourseDesk[0].freePlaces}</p>
 						</div>
-						<button className="moreDetails">Подробнее</button>
+						<Link to="/course/QA"><button className="moreDetails">Подробнее</button></Link>
+
+						
 					</div>
-					<button className="askQuestion">Задать нам вопрос</button>
+					<button className="askQuestion" onClick={() => setActiveModal(true)}>Задать нам вопрос</button>
+					<ModalQuestion active={activeModal} setActive={setActiveModal}/>
 				</div>
 			</div>
 

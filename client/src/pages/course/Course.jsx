@@ -10,14 +10,16 @@ import Header from '../../components/header/Header'
 import Video from '../../components/video/Video'
 import Companies from '../../components/companies/Companies'
 import Reviews from '../../components/reviews/Reviews'
+
 import FormQuestion from '../../components/formQuestion/FormQuestion'
 import Footer from '../../components/footer/Footer'
 import { useParams } from 'react-router-dom'
 import { CourseDesk } from '../../helpers/dummyDates'
 import TechnologiesUnderStudy from '../../components/technologiesUnderStudy/TechnologiesUnderStudy'
 import CoursePlanList from '../../components/coursePlanList/CoursePlanList'
-import MoreInfoAboutPlanItem from '../../components/moreInfoAboutPlanItem/MoreInfoAboutPlanItem'
 import AimOfCourseList from '../../components/aimOfCourseList/AimOfCourseList'
+import ModalWindow from '../../components/modalWindow/ModalWindow';
+import ModalQuestion from '../../components/modalQuestion/ModalQuestion';
 
 export const Course =() => {
 
@@ -25,6 +27,8 @@ export const Course =() => {
 	const course = CourseDesk.find((c) => c.title === title);
 
 	const [selectedPlanItem, setSelectedPlanItem] = useState(null);
+	const [modalActive, setModalActive] = useState(false)
+	const [activeModal, setActiveModal] = useState(false)
 
  
 	const handleItemClick = (index) => {
@@ -32,6 +36,8 @@ export const Course =() => {
   };
 
 	const PF = process.env.REACT_APP_PUBLIC_FOLDER
+
+
 
 	return (
 		<div>
@@ -103,7 +109,9 @@ export const Course =() => {
 					</div>
 					<div className="leaveReviewOrStartCourse">
 						<p className="leaveReview">Оставить отзыв</p>
-						<button className="startCourse">Записаться на онлайн курс</button>
+						<button onClick={() => setModalActive(true)}
+						className="startCourse" type='submit'>Записаться на онлайн курс</button>
+						<ModalWindow active={modalActive} setActive={setModalActive}/>
 					</div>
 					
 				</div>
@@ -151,8 +159,9 @@ export const Course =() => {
 					</div>
 					<div className="courseForWhomTextAndButton">
 						<p className="courseForWhomText">{course.whoCanTakeCourse}</p>
-						<button className="courseForWhomButton">Задать вопрос</button>
+						<button className="courseForWhomButton" onClick={() => setActiveModal(true)} >Задать вопрос </button>
 					</div>
+					<ModalQuestion active={activeModal} setActive={setActiveModal}/>
 				</div>
 			</div>
 

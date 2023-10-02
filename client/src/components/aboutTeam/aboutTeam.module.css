@@ -32,7 +32,7 @@
 	gap: 69px;
 	padding-top: 30px;
 }
-.desc-title {
+.desc_title {
 	width: 529px;
 	height: 109px;
 	font-weight: 800;
@@ -40,7 +40,7 @@
 	line-height: 108.34%;
 	color: var(--white);
 }
-.desc-text {
+.desc_text {
 	width: 511px;
 	height: 82px;
 	font-weight: 400;

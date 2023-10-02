@@ -1,12 +1,13 @@
 import React from 'react'
-import './navigate.css'
+import n from './navigate.module.css'
 export default function Navigate() {
 	return (
 		<div>
-			<div className='navigate'>
+			<div className={n.navigate}>
 				<p>К интересному</p>
-				<a href='#allBlock' className='arrow'></a>
+				<a href='#allBlock' className={n.arrow}></a>
 			</div>
 		</div>
 	)
 }
+
